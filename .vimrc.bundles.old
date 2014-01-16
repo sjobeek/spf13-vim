@@ -91,12 +91,12 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'programming', 'python']
+        let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'go', 'twig', 'javascript', 'haskell', 'html', 'misc', 'scala']
     endif
 
     " To override all the included bundles, add the following to your
     " .vimrc.bundles.local file:
-    "   let g:override_spf13_bundles = 1
+    let g:override_spf13_bundles = 1
     if !exists("g:override_spf13_bundles")
 
     " General {
@@ -107,9 +107,9 @@
             Bundle 'tpope/vim-surround'
             Bundle 'spf13/vim-autoclose'
             Bundle 'kien/ctrlp.vim'
-            "Bundle 'terryma/vim-multiple-cursors'
-            "Bundle 'vim-scripts/sessionman.vim'
-            "Bundle 'matchit.zip'
+            Bundle 'terryma/vim-multiple-cursors'
+            Bundle 'vim-scripts/sessionman.vim'
+            Bundle 'matchit.zip'
             if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
                 Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
             elseif exists('g:spf13_use_powerline') && exists('g:spf13_use_old_powerline')
@@ -117,20 +117,20 @@
             else
                 Bundle 'bling/vim-airline'
             endif
-            "Bundle 'bling/vim-bufferline'
+            Bundle 'bling/vim-bufferline'
             Bundle 'Lokaltog/vim-easymotion'
-            "Bundle 'godlygeek/csapprox'
+            Bundle 'godlygeek/csapprox'
             Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'
             Bundle 'nathanaelkane/vim-indent-guides'
-            "if !exists('g:spf13_no_views')
-            "    Bundle 'vim-scripts/restore_view.vim'
-            "endif
-            "Bundle 'mhinz/vim-signify'
-            "Bundle 'tpope/vim-abolish.git'
-            "Bundle 'osyo-manga/vim-over'
-            "Bundle 'justinmk/vim-sneak'
+            if !exists('g:spf13_no_views')
+                Bundle 'vim-scripts/restore_view.vim'
+            endif
+            Bundle 'mhinz/vim-signify'
+            Bundle 'tpope/vim-abolish.git'
+            Bundle 'osyo-manga/vim-over'
+            Bundle 'justinmk/vim-sneak'
         endif
     " }
 
@@ -139,13 +139,13 @@
             " Pick one of the checksyntax, jslint, or syntastic
             Bundle 'scrooloose/syntastic'
             Bundle 'tpope/vim-fugitive'
-            "Bundle 'mattn/webapi-vim'
-            "Bundle 'mattn/gist-vim'
-            "Bundle 'scrooloose/nerdcommenter'
-            "Bundle 'godlygeek/tabular'
-            "if executable('ctags')
-            "    Bundle 'majutsushi/tagbar'
-            "endif
+            Bundle 'mattn/webapi-vim'
+            Bundle 'mattn/gist-vim'
+            Bundle 'scrooloose/nerdcommenter'
+            Bundle 'godlygeek/tabular'
+            if executable('ctags')
+                Bundle 'majutsushi/tagbar'
+            endif
         endif
     " }
 
@@ -181,10 +181,10 @@
     " Python {
         if count(g:spf13_bundle_groups, 'python')
             " Pick either python-mode or pyflakes & pydoc
-            "Bundle 'klen/python-mode'
+            Bundle 'klen/python-mode'
             Bundle 'python.vim'
-            "Bundle 'python_match.vim'
-            "Bundle 'pythoncomplete'
+            Bundle 'python_match.vim'
+            Bundle 'pythoncomplete'
         endif
     " }
 
@@ -263,6 +263,11 @@
 
 " }
 
+" Use fork bundles config if available {
+    if filereadable(expand("~/.vimrc.bundles.fork"))
+        source ~/.vimrc.bundles.fork
+    endif
+" }
 
 " Use local bundles config if available {
     if filereadable(expand("~/.vimrc.bundles.local"))
