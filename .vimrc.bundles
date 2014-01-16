@@ -105,7 +105,7 @@
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
             Bundle 'tpope/vim-surround'
-            Bundle 'spf13/vim-autoclose'
+            "Bundle 'spf13/vim-autoclose'
             Bundle 'kien/ctrlp.vim'
             "Bundle 'terryma/vim-multiple-cursors'
             "Bundle 'vim-scripts/sessionman.vim'
@@ -123,7 +123,7 @@
             Bundle 'jistr/vim-nerdtree-tabs'
             Bundle 'flazz/vim-colorschemes'
             Bundle 'mbbill/undotree'
-            Bundle 'nathanaelkane/vim-indent-guides'
+            "Bundle 'nathanaelkane/vim-indent-guides'
             "if !exists('g:spf13_no_views')
             "    Bundle 'vim-scripts/restore_view.vim'
             "endif

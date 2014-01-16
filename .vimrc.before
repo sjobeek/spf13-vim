@@ -43,13 +43,13 @@
     " Disable neosnippet expansion
     " This maps over <C-k> and does some Supertab
     " emulation with snippets
-    "   let g:spf13_no_neosnippet_expand = 1
+    let g:spf13_no_neosnippet_expand = 1
 
     " Disable whitespace stripping
     "   let g:spf13_keep_trailing_whitespace = 1
 
     " Enable powerline symbols
-    "   let g:airline_powerline_fonts = 1
+    " let g:airline_powerline_fonts = 1
 
     " vim files directory
     "   let g:spf13_consolidated_directory = <full path to desired directory>
@@ -60,7 +60,7 @@
     " automatically complete, pressing <CR> inserts a newline, etc. Iff the
     " menu is open, tab will cycle through it. If a snippet is selected, <C-k>
     " expands it and jumps between fields.
-    "   let g:spf13_noninvasive_completion = 1
+    let g:spf13_noninvasive_completion = 1
 
     " Don't turn conceallevel or concealcursor
     "   let g:spf13_no_conceal = 1
@@ -78,7 +78,7 @@
 
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings
-    "   let g:multi_cursor_use_default_mapping=0
+    let g:multi_cursor_use_default_mapping=0
     "   let g:multi_cursor_next_key='<C-n>'
     "   let g:multi_cursor_prev_key='<C-p>'
     "   let g:multi_cursor_skip_key='<C-x>'
