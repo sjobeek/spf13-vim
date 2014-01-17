@@ -862,7 +862,7 @@
             elseif OSX() && has("gui_running")
                 set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
             elseif WINDOWS() && has("gui_running")
-                set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
+                set guifont=Andale_Mono:h12,Menlo:h12,Consolas:h12,Courier_New:h12
             endif
         endif
     else
